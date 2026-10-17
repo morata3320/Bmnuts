@@ -1,0 +1,2751 @@
+{
+    "brand":  {
+                  "name":  "BM Nuts",
+                  "tagline":  "Frutos secos y mucho más",
+                  "logo":  "/images/branding/bmnuts-logo.png",
+                  "taglines":  [
+                                   "Productos que te encantan, atención que te hace volver.",
+                                   "Variedad natural y atención cercana, siempre en BM Nuts.",
+                                   "Tu próximo ingrediente favorito te espera en BM Nuts.",
+                                   "Sabores para compartir, atención para recordar.",
+                                   "En BM Nuts, cada producto tiene algo especial.",
+                                   "Encuentra tus favoritos, descubre nuevos sabores."
+                               ],
+                  "phone":  null,
+                  "whatsapp":  null,
+                  "email":  null,
+                  "instagramHandle":  "bmnuts_frutossecos",
+                  "instagramUrl":  null,
+                  "facebookUrl":  null,
+                  "locations":  [
+                                    {
+                                        "label":  "Matriz",
+                                        "description":  "Norte de Quito, sector La Prensa",
+                                        "exactAddress":  null,
+                                        "needsVerification":  true
+                                    },
+                                    {
+                                        "label":  "Sucursal",
+                                        "description":  "Conocoto",
+                                        "exactAddress":  null,
+                                        "needsVerification":  true
+                                    }
+                                ]
+              },
+    "categories":  [
+                       {
+                           "id":  "frutos-secos-y-snacks",
+                           "name":  "Frutos secos y snacks",
+                           "description":  "Nueces, maní, pistachos y snacks tradicionales.",
+                           "order":  1
+                       },
+                       {
+                           "id":  "frutas-deshidratadas",
+                           "name":  "Frutas deshidratadas",
+                           "description":  "Frutas secas, pasas, dátiles y mezclas.",
+                           "order":  2
+                       },
+                       {
+                           "id":  "especias-y-condimentos",
+                           "name":  "Especias y condimentos",
+                           "description":  "Especias molidas, condimentos aromáticos y picantes.",
+                           "order":  3
+                       },
+                       {
+                           "id":  "semillas-y-cereales",
+                           "name":  "Semillas y cereales",
+                           "description":  "Semillas, avena y derivados.",
+                           "order":  4
+                       },
+                       {
+                           "id":  "hierbas-e-infusiones",
+                           "name":  "Hierbas e infusiones",
+                           "description":  "Flores, hojas y hierbas para infusiones y otros usos tradicionales.",
+                           "order":  5
+                       },
+                       {
+                           "id":  "harinas",
+                           "name":  "Harinas",
+                           "description":  "Próximamente: inventario pendiente.",
+                           "order":  6,
+                           "isComingSoon":  true
+                       }
+                   ],
+    "products":  [
+                     {
+                         "id":  "BMN-001",
+                         "slug":  "almendra-natural",
+                         "name":  "Almendra natural",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Almendras",
+                         "shortDescription":  "Almendras naturales de sabor suave y textura firme. Ideales para comer solas o incorporar en mezclas de frutos secos, desayunos y recetas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/almendra-natural.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Almendra natural de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-2",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  true,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-002",
+                         "slug":  "almendra-pelada",
+                         "name":  "Almendra pelada",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Almendras",
+                         "shortDescription":  "Almendras sin piel, de textura suave y sabor delicado. Una opción práctica para repostería, preparaciones caseras y mezclas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/almendra-pelada.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Almendra pelada de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-2",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-003",
+                         "slug":  "almendra-laminada",
+                         "name":  "Almendra laminada",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Almendras",
+                         "shortDescription":  "Almendras cortadas en láminas finas, fáciles de distribuir sobre yogur, avena, postres y productos de repostería.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/almendra-laminada.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Almendra laminada de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-2",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-004",
+                         "slug":  "almendra-tostada",
+                         "name":  "Almendra tostada",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Almendras",
+                         "shortDescription":  "Almendras tostadas de aroma pronunciado y textura crujiente. Perfectas para disfrutar como snack o añadir a mezclas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/almendra-tostada.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Almendra tostada de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-2",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-005",
+                         "slug":  "almendra-ahumada",
+                         "name":  "Almendra ahumada",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Almendras",
+                         "shortDescription":  "Almendras de sabor ahumado y carácter intenso. Una alternativa para quienes prefieren snacks con un toque diferente.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/almendra-ahumada.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Almendra ahumada de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-3",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-006",
+                         "slug":  "almendra-dulce",
+                         "name":  "Almendra dulce",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Almendras",
+                         "shortDescription":  "Almendras en presentación dulce, de sabor suave y agradable. Una opción para disfrutar como bocadito o acompañar postres.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/almendra-dulce.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Almendra dulce de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-3",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-007",
+                         "slug":  "nuez-comun",
+                         "name":  "Nuez común",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Nueces",
+                         "shortDescription":  "Nueces de sabor característico y textura crujiente. Se pueden disfrutar solas o utilizar en ensaladas, repostería y mezclas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/nuez-comun.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Nuez común de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-3",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-008",
+                         "slug":  "nuez-pecana",
+                         "name":  "Nuez pecana",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Nueces",
+                         "shortDescription":  "Nueces pecanas de sabor suave y notas delicadas. Destacan en postres, galletas, granolas y combinaciones de frutos secos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/nuez-pecana.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Nuez pecana de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-3",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  true,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-009",
+                         "slug":  "nuez-del-brasil",
+                         "name":  "Nuez del Brasil",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Nueces",
+                         "shortDescription":  "Nueces del Brasil de tamaño generoso y textura firme. Pueden disfrutarse como snack o integrarse en mezclas de frutos secos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/nuez-del-brasil.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Nuez del Brasil de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-4",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-010",
+                         "slug":  "nuez-macadamia",
+                         "name":  "Nuez macadamia",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Nueces",
+                         "shortDescription":  "Nueces macadamia de sabor delicado y textura cremosa. Una alternativa para mezclas especiales y preparaciones dulces.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/nuez-macadamia.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Nuez macadamia de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-4",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-011",
+                         "slug":  "pistacho-con-cascara",
+                         "name":  "Pistacho con cáscara",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Pistachos",
+                         "shortDescription":  "Pistachos con cáscara, de sabor particular y textura crujiente. Una presentación clásica para disfrutar como snack.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/pistacho-con-cascara.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Pistacho con cáscara de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-4",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-012",
+                         "slug":  "pistacho-pelado",
+                         "name":  "Pistacho pelado",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Pistachos",
+                         "shortDescription":  "Pistachos pelados, listos para incorporar a granolas, recetas dulces y saladas o consumir directamente.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/pistacho-pelado.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Pistacho pelado de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-4",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  true,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-013",
+                         "slug":  "cashew-tostada",
+                         "name":  "Cashew tostada",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Cashews",
+                         "shortDescription":  "Cashews tostados de textura crocante y sabor más intenso. Pueden disfrutarse solos o combinarse con otros frutos secos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/cashew-tostada.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Cashew tostada de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-5",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-014",
+                         "slug":  "cashew-natural",
+                         "name":  "Cashew natural",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Cashews",
+                         "shortDescription":  "Cashews naturales de sabor suave y textura delicada. Versátiles para snacks, mezclas y distintas preparaciones culinarias.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/cashew-natural.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Cashew natural de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-5",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-015",
+                         "slug":  "mani-crudo",
+                         "name":  "Maní crudo",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maní",
+                         "shortDescription":  "Maní crudo sin tostar, ideal como ingrediente para preparaciones que requieren cocción o tostado posterior.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/mani-crudo.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maní crudo de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-5",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-016",
+                         "slug":  "mani-tostado",
+                         "name":  "Maní tostado",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maní",
+                         "shortDescription":  "Maní tostado de aroma agradable y textura crujiente. Un snack clásico que también puede utilizarse en mezclas y recetas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/mani-tostado.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maní tostado de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-5",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  true,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-017",
+                         "slug":  "mani-salado",
+                         "name":  "Maní salado",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maní",
+                         "shortDescription":  "Maní de sal con textura crocante y sabor salado. Una opción práctica para compartir y disfrutar entre comidas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/mani-salado.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maní salado de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-6",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-018",
+                         "slug":  "mani-de-dulce",
+                         "name":  "Maní de dulce",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maní",
+                         "shortDescription":  "Maní de dulce con cobertura dulce y textura crujiente. Ideal para un bocadito de sabor tradicional.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/mani-de-dulce.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maní de dulce de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-6",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-019",
+                         "slug":  "mani-con-miel-de-abeja",
+                         "name":  "Maní con miel de abeja",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maní",
+                         "shortDescription":  "Maní con miel de abeja de sabor dulce y textura crocante. Una combinación pensada para quienes prefieren snacks dulces.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/mani-con-miel-de-abeja.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maní con miel de abeja de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-6",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-020",
+                         "slug":  "mani-con-ajonjoli",
+                         "name":  "Maní con ajonjolí",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maní",
+                         "shortDescription":  "Maní con ajonjolí, una combinación de texturas crujientes y sabores tostados. Puede disfrutarse como bocadito.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/mani-con-ajonjoli.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maní con ajonjolí de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-6",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-021",
+                         "slug":  "mani-cubierto",
+                         "name":  "Maní cubierto",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maní",
+                         "shortDescription":  "Maní cubierto con una capa exterior crujiente. Un snack de textura diferente para compartir o disfrutar en cualquier momento.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/mani-cubierto.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maní cubierto de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-7",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-022",
+                         "slug":  "manicris-japones",
+                         "name":  "Manícris japonés",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maní",
+                         "shortDescription":  "Manícris japonés, bocadito de maní con recubrimiento crocante y sabor característico. Una opción para snacks variados.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/manicris-japones.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Manícris japonés de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-7",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-023",
+                         "slug":  "sacha-inchi",
+                         "name":  "Sacha inchi",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Sacha inchi",
+                         "shortDescription":  "Sacha inchi, semilla amazónica de sabor característico. Puede disfrutarse sola o incorporarse a mezclas de semillas y frutos secos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/sacha-inchi.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Sacha inchi de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-7",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-024",
+                         "slug":  "haba-de-sal",
+                         "name":  "Haba de sal",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Habas",
+                         "shortDescription":  "Habas de sal de textura firme y crujiente, con sabor salado tradicional. Ideales para consumir como snack.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/haba-de-sal.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Haba de sal de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-8",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-025",
+                         "slug":  "haba-de-dulce",
+                         "name":  "Haba de dulce",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Habas",
+                         "shortDescription":  "Habas en presentación dulce, que combinan textura crujiente con un toque de dulzor. Una alternativa de bocadito.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/haba-de-dulce.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Haba de dulce de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-8",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-026",
+                         "slug":  "haba-de-limon",
+                         "name":  "Haba de limón",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Habas",
+                         "shortDescription":  "Habas con sabor a limón, de textura crujiente y toque cítrico. Una opción diferente para compartir.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/haba-de-limon.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Haba de limón de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-8",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-027",
+                         "slug":  "haba-picante",
+                         "name":  "Haba picante",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Habas",
+                         "shortDescription":  "Habas picantes, crujientes y condimentadas con un toque de picante. Una alternativa para amantes de sabores intensos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/haba-picante.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Haba picante de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-8",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-028",
+                         "slug":  "garbanzo-de-dulce",
+                         "name":  "Garbanzo de dulce",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Garbanzos",
+                         "shortDescription":  "Garbanzos de dulce con textura crocante y toque dulce. Un snack práctico de sabor diferente.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/garbanzo-de-dulce.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Garbanzo de dulce de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-9",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-029",
+                         "slug":  "garbanzo-de-sal",
+                         "name":  "Garbanzo de sal",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Garbanzos",
+                         "shortDescription":  "Garbanzos de sal de textura crujiente y sabor salado. Se pueden disfrutar solos o como parte de una mezcla de snacks.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/garbanzo-de-sal.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Garbanzo de sal de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-9",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-030",
+                         "slug":  "maiz-de-sal",
+                         "name":  "Maíz de sal",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maíz y chulpi",
+                         "shortDescription":  "Maíz de sal tostado o preparado como snack crujiente, con sabor salado tradicional. Ideal para compartir.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/maiz-de-sal.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maíz de sal de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-9",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-031",
+                         "slug":  "maiz-de-dulce",
+                         "name":  "Maíz de dulce",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maíz y chulpi",
+                         "shortDescription":  "Maíz en presentación dulce, crujiente y con toque de dulzor. Una alternativa para disfrutar entre comidas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/maiz-de-dulce.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Maíz de dulce de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-9",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-032",
+                         "slug":  "chulpi-de-sal",
+                         "name":  "Chulpi de sal",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Maíz y chulpi",
+                         "shortDescription":  "Chulpi de sal, maíz andino pequeño y crujiente con sabor salado. Puede servirse como snack o acompañamiento.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/chulpi-de-sal.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Chulpi de sal de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-10",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-033",
+                         "slug":  "avellana",
+                         "name":  "Avellana",
+                         "categoryId":  "frutos-secos-y-snacks",
+                         "subcategory":  "Avellanas",
+                         "shortDescription":  "Avellanas de sabor delicado y textura firme. Ideales para repostería, preparaciones dulces y mezclas de frutos secos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/avellana.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Avellana de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-10",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-034",
+                         "slug":  "pasa-negra",
+                         "name":  "Pasa negra",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Pasas",
+                         "shortDescription":  "Pasas negras de sabor dulce concentrado y textura blanda. Se utilizan en repostería, granola y preparaciones caseras.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/pasa-negra.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Pasa negra de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-11",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-035",
+                         "slug":  "pasa-rubia",
+                         "name":  "Pasa rubia",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Pasas",
+                         "shortDescription":  "Pasas rubias de tono dorado y sabor dulce suave. Versátiles para panes, postres, ensaladas y mezclas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/pasa-rubia.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Pasa rubia de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-11",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  true,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-036",
+                         "slug":  "arandano-rojo",
+                         "name":  "Arándano rojo",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Arándanos",
+                         "shortDescription":  "Arándanos rojos deshidratados de sabor frutal intenso. Pueden incorporarse a granolas, repostería y snacks.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/arandano-rojo.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Arándano rojo de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-11",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  true,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-037",
+                         "slug":  "arandano-negro",
+                         "name":  "Arándano negro",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Arándanos",
+                         "shortDescription":  "Arándanos negros deshidratados de sabor profundo. Una opción para combinar con frutos secos o usar en recetas dulces.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/arandano-negro.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Arándano negro de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-11",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-038",
+                         "slug":  "ciruela-pasa",
+                         "name":  "Ciruela pasa",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Frutas clásicas",
+                         "shortDescription":  "Ciruelas pasas de textura suave y dulzor concentrado. Se disfrutan solas o se añaden a postres y preparaciones.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/ciruela-pasa.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Ciruela pasa de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-12",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-039",
+                         "slug":  "damasco-deshidratado",
+                         "name":  "Damasco deshidratado",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Frutas clásicas",
+                         "shortDescription":  "Damascos deshidratados de sabor frutal y textura flexible. Ideales como snack o ingrediente de mezclas y repostería.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/damasco-deshidratado.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Damasco deshidratado de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-12",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-040",
+                         "slug":  "datil-sin-pepa",
+                         "name":  "Dátil sin pepa",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Dátiles",
+                         "shortDescription":  "Dátiles sin pepa, de textura suave y dulzor natural. Se utilizan en bocaditos, postres y preparaciones culinarias.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+                                        "/images/products/datil-sin-pepa.webp"
+                                    ],
+                         "imageAlt":  "Fotografía de Dátil sin pepa de BM Nuts",
+                         "source":  "catalogo-pdf-pagina-12",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-041",
+                         "slug":  "pina-deshidratada",
+                         "name":  "Piña deshidratada",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Frutas tropicales",
+                         "shortDescription":  "Piña deshidratada con el sabor tropical concentrado de la fruta. Puede comerse sola o incorporarse a mezclas y postres.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-042",
+                         "slug":  "uvilla-deshidratada",
+                         "name":  "Uvilla deshidratada",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Frutas tropicales",
+                         "shortDescription":  "Uvilla deshidratada con un perfil de sabor frutal entre ácido y dulce. Ideal para mezclas y bocaditos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-043",
+                         "slug":  "limon-deshidratado",
+                         "name":  "Limón deshidratado",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Cítricos",
+                         "shortDescription":  "Rodajas o piezas de limón deshidratado, útiles para aromatizar infusiones, bebidas y preparaciones culinarias.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-044",
+                         "slug":  "naranja-deshidratada",
+                         "name":  "Naranja deshidratada",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Cítricos",
+                         "shortDescription":  "Naranja deshidratada de aroma cítrico, adecuada para infusiones, decoración y distintas preparaciones.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-045",
+                         "slug":  "mora-deshidratada",
+                         "name":  "Mora deshidratada",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Frutos rojos",
+                         "shortDescription":  "Mora deshidratada con sabor frutal concentrado. Puede incorporarse a mezclas, granolas o recetas dulces.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-046",
+                         "slug":  "frutilla-deshidratada",
+                         "name":  "Frutilla deshidratada",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Frutos rojos",
+                         "shortDescription":  "Frutilla deshidratada con aroma característico. Una opción para mezclar con cereales, frutos secos y postres.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-047",
+                         "slug":  "manzana-deshidratada",
+                         "name":  "Manzana deshidratada",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Frutas clásicas",
+                         "shortDescription":  "Manzana deshidratada de sabor frutal suave. Puede disfrutarse como snack o añadirse a desayunos y preparaciones.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-048",
+                         "slug":  "mix-amarillo",
+                         "name":  "Mix amarillo",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Mix de frutas",
+                         "shortDescription":  "Mezcla de frutas deshidratadas identificada como mix amarillo. La composición exacta está pendiente de confirmación.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-049",
+                         "slug":  "mix-rojo",
+                         "name":  "Mix rojo",
+                         "categoryId":  "frutas-deshidratadas",
+                         "subcategory":  "Mix de frutas",
+                         "shortDescription":  "Mezcla de frutas deshidratadas identificada como mix rojo. La composición exacta está pendiente de confirmación.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-050",
+                         "slug":  "cebolla-molida",
+                         "name":  "Cebolla molida",
+                         "categoryId":  "especias-y-condimentos",
+                         "subcategory":  "Condimentos básicos",
+                         "shortDescription":  "Cebolla molida, condimento de uso práctico para sazonar sopas, salsas, adobos y diversas preparaciones saladas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-051",
+                         "slug":  "ajo-molido",
+                         "name":  "Ajo molido",
+                         "categoryId":  "especias-y-condimentos",
+                         "subcategory":  "Condimentos básicos",
+                         "shortDescription":  "Ajo molido de aroma característico, utilizado para condimentar carnes, vegetales, salsas y recetas caseras.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-052",
+                         "slug":  "comino",
+                         "name":  "Comino",
+                         "categoryId":  "especias-y-condimentos",
+                         "subcategory":  "Especias aromáticas",
+                         "shortDescription":  "Comino, especia aromática habitual en guisos, legumbres, sopas y adobos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-053",
+                         "slug":  "curry",
+                         "name":  "Curry",
+                         "categoryId":  "especias-y-condimentos",
+                         "subcategory":  "Especias aromáticas",
+                         "shortDescription":  "Curry, mezcla de especias aromáticas que aporta carácter a arroces, salsas, vegetales y distintas recetas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-054",
+                         "slug":  "paprika-normal",
+                         "name":  "Paprika normal",
+                         "categoryId":  "especias-y-condimentos",
+                         "subcategory":  "Paprikas",
+                         "shortDescription":  "Paprika de sabor característico y color rojizo, ideal para aportar color y condimentar preparaciones saladas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-055",
+                         "slug":  "paprika-ahumada",
+                         "name":  "Paprika ahumada",
+                         "categoryId":  "especias-y-condimentos",
+                         "subcategory":  "Paprikas",
+                         "shortDescription":  "Paprika ahumada con aroma tostado y notas ahumadas, adecuada para adobos, salsas y platos salados.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-056",
+                         "slug":  "aji-molido",
+                         "name":  "Ají molido",
+                         "categoryId":  "especias-y-condimentos",
+                         "subcategory":  "Ajíes y picantes",
+                         "shortDescription":  "Ají molido para agregar un toque de picante y sabor a distintas recetas. Ajusta la cantidad según el gusto.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-057",
+                         "slug":  "aji-peruano",
+                         "name":  "Ají peruano",
+                         "categoryId":  "especias-y-condimentos",
+                         "subcategory":  "Ajíes y picantes",
+                         "shortDescription":  "Ají peruano, condimento de sabor característico para recetas y salsas. La variedad exacta está pendiente de confirmar.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-058",
+                         "slug":  "avena",
+                         "name":  "Avena",
+                         "categoryId":  "semillas-y-cereales",
+                         "subcategory":  "Cereales",
+                         "shortDescription":  "Avena, cereal versátil para desayunos, coladas, galletas y preparaciones dulces o saladas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-059",
+                         "slug":  "linaza-en-semilla",
+                         "name":  "Linaza en semilla",
+                         "categoryId":  "semillas-y-cereales",
+                         "subcategory":  "Semillas",
+                         "shortDescription":  "Semillas de linaza enteras, utilizadas como ingrediente en panes, cereales, mezclas y preparaciones culinarias.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-060",
+                         "slug":  "linaza-molida",
+                         "name":  "Linaza molida",
+                         "categoryId":  "semillas-y-cereales",
+                         "subcategory":  "Semillas molidas",
+                         "shortDescription":  "Linaza molida, presentación práctica para incorporar a masas, batidos y desayunos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-061",
+                         "slug":  "manzanilla",
+                         "name":  "Manzanilla",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Flores y floraciones",
+                         "shortDescription":  "Manzanilla, flores utilizadas tradicionalmente para preparar infusiones de aroma suave.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-062",
+                         "slug":  "flor-blanca",
+                         "name":  "Flor blanca",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Flores y floraciones",
+                         "shortDescription":  "Producto comercial denominado flor blanca. Es necesario confirmar la especie botánica antes de describir usos o propiedades.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-063",
+                         "slug":  "jamaica",
+                         "name":  "Jamaica",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Flores y floraciones",
+                         "shortDescription":  "Flor de Jamaica seca, utilizada para preparar bebidas e infusiones de color intenso y sabor característico.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-064",
+                         "slug":  "calendula",
+                         "name":  "Caléndula",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Flores y floraciones",
+                         "shortDescription":  "Caléndula, flores secas empleadas en preparaciones herbales y usos tradicionales. Confirmar su presentación exacta.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-065",
+                         "slug":  "cedron",
+                         "name":  "Cedrón",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hojas y plantas aromáticas",
+                         "shortDescription":  "Cedrón, hojas aromáticas de notas cítricas utilizadas tradicionalmente para preparar infusiones.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-066",
+                         "slug":  "toronjil",
+                         "name":  "Toronjil",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hojas y plantas aromáticas",
+                         "shortDescription":  "Toronjil, hierba aromática de notas suaves utilizada para preparar infusiones.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-067",
+                         "slug":  "guayusa",
+                         "name":  "Guayusa",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hojas y plantas aromáticas",
+                         "shortDescription":  "Guayusa, hojas amazónicas utilizadas para preparar infusiones de sabor vegetal característico.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-068",
+                         "slug":  "hoja-de-te-verde",
+                         "name":  "Hoja de té verde",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hojas y plantas aromáticas",
+                         "shortDescription":  "Hojas de té verde para preparar infusiones de sabor vegetal y aroma característico.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-069",
+                         "slug":  "hoja-de-higo",
+                         "name":  "Hoja de higo",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hojas y plantas aromáticas",
+                         "shortDescription":  "Hojas de higo secas comercializadas para preparación herbal. Confirmar presentación y recomendaciones de uso.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-070",
+                         "slug":  "laurel",
+                         "name":  "Laurel",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hojas y plantas aromáticas",
+                         "shortDescription":  "Laurel, hoja aromática empleada comúnmente para condimentar caldos, guisos y salsas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-071",
+                         "slug":  "oregano",
+                         "name":  "Orégano",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hojas y plantas aromáticas",
+                         "shortDescription":  "Orégano, hierba aromática de uso culinario para salsas, carnes, sopas y distintas preparaciones.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-072",
+                         "slug":  "eneldo",
+                         "name":  "Eneldo",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hojas y plantas aromáticas",
+                         "shortDescription":  "Eneldo, hierba aromática para condimentar salsas, vegetales, pescados y platos salados.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-073",
+                         "slug":  "llanten",
+                         "name":  "Llantén",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hierbas tradicionales",
+                         "shortDescription":  "Llantén, planta que se comercializa para preparaciones herbales tradicionales. Confirmar especie y presentación.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-074",
+                         "slug":  "cola-de-caballo",
+                         "name":  "Cola de caballo",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hierbas tradicionales",
+                         "shortDescription":  "Cola de caballo, planta seca para preparaciones herbales tradicionales. Confirmar especie y modo de presentación.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-075",
+                         "slug":  "hercampuri",
+                         "name":  "Hercampuri",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hierbas tradicionales",
+                         "shortDescription":  "Hercampuri, hierba tradicional de sabor amargo. Su preparación y posibles contraindicaciones requieren información verificada.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-076",
+                         "slug":  "boldo",
+                         "name":  "Boldo",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hierbas tradicionales",
+                         "shortDescription":  "Boldo, hojas aromáticas usadas tradicionalmente en infusiones. Consultar precauciones antes de su consumo.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-077",
+                         "slug":  "matico",
+                         "name":  "Matico",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hierbas tradicionales",
+                         "shortDescription":  "Matico, nombre común de distintas plantas. Confirmar la especie y presentación antes de recomendar usos.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-078",
+                         "slug":  "chancapiedra",
+                         "name":  "Chancapiedra",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hierbas tradicionales",
+                         "shortDescription":  "Chancapiedra, nombre común de una planta de uso tradicional. Confirmar especie y precauciones antes de su consumo.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-079",
+                         "slug":  "diente-de-leon",
+                         "name":  "Diente de león",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hierbas tradicionales",
+                         "shortDescription":  "Diente de león, planta de uso tradicional en preparaciones herbales. Confirmar si se comercializa hoja, raíz u otra parte.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-080",
+                         "slug":  "alcachofa",
+                         "name":  "Alcachofa",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Hierbas tradicionales",
+                         "shortDescription":  "Alcachofa, producto herbal cuyo formato exacto debe confirmarse (hojas u otra presentación).",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-081",
+                         "slug":  "guabiduro",
+                         "name":  "Guabiduro",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Otras plantas e infusiones",
+                         "shortDescription":  "Producto llamado guabiduro. La identidad botánica y la presentación comercial están pendientes de verificar.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-082",
+                         "slug":  "moringa",
+                         "name":  "Moringa",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Otras plantas e infusiones",
+                         "shortDescription":  "Moringa, planta comercializada para distintos usos culinarios y herbales. Confirmar qué parte se vende y su presentación.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-083",
+                         "slug":  "guanabana",
+                         "name":  "Guanábana",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Otras plantas e infusiones",
+                         "shortDescription":  "Producto identificado como guanábana. Confirmar si se comercializan hojas u otra parte de la planta.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-084",
+                         "slug":  "sen",
+                         "name":  "Sen",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Otras plantas e infusiones",
+                         "shortDescription":  "Sen, planta tradicionalmente utilizada como ingrediente de preparados herbales. Su consumo requiere precauciones específicas.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-085",
+                         "slug":  "cardamomo",
+                         "name":  "Cardamomo",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Otras plantas e infusiones",
+                         "shortDescription":  "Cardamomo, especia de aroma intenso utilizada en repostería, bebidas e infusiones. Confirmar presentación.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-086",
+                         "slug":  "jengibre",
+                         "name":  "Jengibre",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Otras plantas e infusiones",
+                         "shortDescription":  "Jengibre, raíz aromática utilizada para condimentar comidas, bebidas e infusiones.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  false,
+                         "published":  true,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-087",
+                         "slug":  "alpiste",
+                         "name":  "Alpiste",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Otras plantas e infusiones",
+                         "shortDescription":  "Alpiste, semilla utilizada en diferentes preparaciones según su variedad. Confirmar que sea apta para consumo humano.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-088",
+                         "slug":  "yolon",
+                         "name":  "Yolón",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Por confirmar",
+                         "shortDescription":  "Producto denominado yolón. Confirmar su nombre comercial y su identificación botánica.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-089",
+                         "slug":  "brosgil",
+                         "name":  "Brosgil",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Por confirmar",
+                         "shortDescription":  "Producto denominado brosgil. Confirmar su nombre comercial y su identificación botánica.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-090",
+                         "slug":  "alanten",
+                         "name":  "Alantén",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Por confirmar",
+                         "shortDescription":  "Producto denominado alantén. Confirmar si se trata de llantén u otra especie.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-091",
+                         "slug":  "orejano",
+                         "name":  "Orejano",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Por confirmar",
+                         "shortDescription":  "Producto denominado orejano. Confirmar si se trata de orégano u otra especie.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     },
+                     {
+                         "id":  "BMN-092",
+                         "slug":  "tupacachi",
+                         "name":  "Tupacachi",
+                         "categoryId":  "hierbas-e-infusiones",
+                         "subcategory":  "Por confirmar",
+                         "shortDescription":  "Producto denominado tupacachi. Confirmar su identificación botánica y presentación comercial.",
+                         "longDescription":  null,
+                         "traditionalUses":  [
+
+                                             ],
+                         "nutritionFacts":  [
+
+                                            ],
+                         "price":  null,
+                         "currency":  "USD",
+                         "unit":  null,
+                         "images":  [
+
+                                    ],
+                         "imageAlt":  null,
+                         "source":  "usuario",
+                         "needsVerification":  true,
+                         "published":  false,
+                         "featured":  false,
+                         "tags":  [
+
+                                  ]
+                     }
+                 ],
+    "editorialFlags":  {
+                           "pricesConfirmed":  false,
+                           "contactDataConfirmed":  false,
+                           "healthClaimsReviewed":  false,
+                           "allImagesVerified":  false,
+                           "note":  "Algunos nombres de plantas y fotos del PDF requieren revisión antes de publicación definitiva. No inventar precios, direcciones, evidencia clínica ni imágenes oficiales."
+                       }
+}
