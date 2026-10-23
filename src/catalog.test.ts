@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   data,
+  filterCatalogProducts,
   formatProductPrice,
   getPublishedProducts,
   normalizeSearch,
@@ -24,7 +25,7 @@ describe('catálogo BM Nuts', () => {
     expect(searchProducts(getPublishedProducts(), 'producto-que-no-existe-xyz')).toHaveLength(0);
   });
 
-  it('no inventa un precio nulo', () => expect(formatProductPrice(null)).toBe('Consultar precio'));
+  it('no inventa un precio nulo', () => expect(formatProductPrice(null)).toBe('Precio por confirmar'));
 
   it('excluye pendientes de verificación', () => {
     expect(getPublishedProducts().every((product) => !product.needsVerification && product.published)).toBe(true);
@@ -57,5 +58,17 @@ describe('catálogo BM Nuts', () => {
       'Hierbas e infusiones',
       'Harinas',
     ]);
+  });
+
+  it('combina categoría, subcategoría, búsqueda, favoritos y colección', () => {
+    const filtered = filterCatalogProducts(getPublishedProducts(), {
+      query: 'mani',
+      categoryId: 'frutos-secos-y-snacks',
+      subcategory: 'MANÍ',
+      onlyFavorites: true,
+      favoriteIds: ['BMN-015', 'BMN-001'],
+      collectionIds: ['BMN-015', 'BMN-058'],
+    });
+    expect(filtered.map((product) => product.id)).toEqual(['BMN-015']);
   });
 });

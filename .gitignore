@@ -11,3 +11,11 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 *.tsbuildinfo
+
+# Fuentes privadas y exportaciones internas de inventario BM Nuts
+DATOS_PRIVADOS_NO_SUBIR/
+private-data/
+**/Listado_Productos*.xlsx
+**/INVENTARIO_NORMALIZADO*_PRIVADO.json
+**/*PRECIOS*PRIVADO*
+**/CONCILIACION_*_PRIVADA.json

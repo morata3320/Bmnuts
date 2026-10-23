@@ -12,10 +12,12 @@ import {
 } from 'react-router-dom';
 import {
   ArrowRight,
+  ArrowUp,
   Bell,
+  ChevronLeft,
+  ChevronRight,
   Download,
   Heart,
-  Info,
   Leaf,
   Menu,
   Search,
@@ -26,16 +28,30 @@ import {
 import './style.css';
 import {
   data,
-  formatProductPrice,
+  filterCatalogProducts,
+  formatPriceCents,
+  getCatalogCategories,
+  getCategorySubcategories,
   getPublishedProducts,
+  normalizeSearch,
   pickNextTagline,
   searchProducts,
   type Product,
 } from './catalog';
 import { contactConfig, mapsSearchUrl, type SocialChannel } from './contactConfig';
 import { productFacts } from './productFacts';
+import { productEducation } from './productEducation';
+import {
+  CombinationDetail,
+  FeaturedStandCarousel,
+  getCollectionProducts,
+  RelatedProducts,
+  ThemedCollections,
+} from './components/editorial';
+import { ProductPresentations } from './components/ProductPresentations';
+import { getProductImagePresentation } from './data/productImagePresentation';
 
-const categories = [...data.categories].sort((a, b) => a.order - b.order);
+const categories = getCatalogCategories();
 const products = getPublishedProducts();
 
 type Favorites = ReturnType<typeof useFavorites>;
@@ -164,9 +180,18 @@ export function ProductMedia({ product }: { product: Product }) {
   const [failed, setFailed] = useState(false);
   const image = product.images[0];
   const hasImage = Boolean(image && !failed);
+  const presentation = getProductImagePresentation(product.slug);
 
   return (
-    <div className="product-media" data-flipped={flipped} onMouseLeave={() => setFlipped(false)}>
+    <button
+      className="product-media"
+      type="button"
+      data-flipped={flipped}
+      onClick={() => setFlipped((current) => !current)}
+      onMouseLeave={() => setFlipped(false)}
+      aria-label={flipped ? `Volver a la fotografía de ${product.name}` : `Ver descripción de ${product.name}`}
+      aria-pressed={flipped}
+    >
       <div className="product-flip">
         <div className="product-face product-face--front">
           {hasImage ? (
@@ -175,6 +200,11 @@ export function ProductMedia({ product }: { product: Product }) {
               <img
                 src={image}
                 alt={product.imageAlt || `Fotografía de ${product.name}`}
+                style={{
+                  objectPosition: presentation.objectPosition,
+                  padding: presentation.framePadding,
+                  transform: `scale(${presentation.scale})`,
+                }}
                 onLoad={() => setLoaded(true)}
                 onError={() => setFailed(true)}
               />
@@ -189,28 +219,29 @@ export function ProductMedia({ product }: { product: Product }) {
           <p>{product.shortDescription}</p>
         </div>
       </div>
-      <button
-        className="flip-button"
-        type="button"
-        onClick={() => setFlipped((current) => !current)}
-        aria-label={flipped ? 'Volver a la fotografía' : 'Ver descripción'}
-        aria-pressed={flipped}
-      >
-        {flipped ? <X aria-hidden="true" /> : <Info aria-hidden="true" />}
-      </button>
-    </div>
+    </button>
   );
 }
 
 export function ProductCard({
   product,
   favorites,
-  onContact,
 }: {
   product: Product;
   favorites: Favorites;
-  onContact: (product?: string) => void;
 }) {
+  const variantPrices = (product.variants ?? [])
+    .map((variant) => variant.approvedPriceCents)
+    .filter((price): price is number => typeof price === 'number');
+  const prices = product.approvedPriceCents === null || product.approvedPriceCents === undefined
+    ? variantPrices
+    : [product.approvedPriceCents];
+  const lowestPrice = prices.length > 0 ? Math.min(...prices) : null;
+  const isSingleBulk = product.saleMode === 'bulk' && product.approvedPriceCents !== null && product.approvedPriceCents !== undefined;
+  const isRestricted = product.saleMode === 'restricted' && product.approvedPriceCents !== null && product.approvedPriceCents !== undefined;
+  const restrictedStartingPrice = isRestricted && lowestPrice !== null && lowestPrice / 2 >= 100
+    ? Math.round(lowestPrice / 2)
+    : lowestPrice;
   return (
     <article className="product-card">
       <div className="product-card__media-shell">
@@ -221,14 +252,21 @@ export function ProductCard({
         <small>{product.subcategory}</small>
         <h3>{product.name}</h3>
         <p className="product-summary">{product.shortDescription}</p>
+        {product.variants && product.variants.length > 1 && (
+          <small className="product-variant-count">{product.variants.length} presentaciones</small>
+        )}
         <div className="product-actions">
-          {product.price === null ? (
-            <button type="button" className="price-action" onClick={() => onContact(product.name)}>
-              Consultar precio
-            </button>
-          ) : (
-            <span className="product-price">{formatProductPrice(product.price)}</span>
-          )}
+          <div className="product-card-price">
+            {lowestPrice === null ? (
+              <strong>Precio por confirmar</strong>
+            ) : isSingleBulk ? (
+              <><strong>{formatPriceCents(lowestPrice)} / libra</strong><small>Venta a granel desde $1</small></>
+            ) : isRestricted ? (
+              <><strong>Desde {formatPriceCents(restrictedStartingPrice ?? lowestPrice)}</strong><small>Precio por libra: {formatPriceCents(lowestPrice)}</small></>
+            ) : (
+              <><strong>{prices.length > 1 ? `Desde ${formatPriceCents(lowestPrice)}` : formatPriceCents(lowestPrice)}</strong><small>{prices.length > 1 ? 'Precios según presentación' : product.pricePresentationLabel || product.unit || 'Presentación fija'}</small></>
+            )}
+          </div>
           <Link className="more-link" to={`/producto/${product.slug}`}>
             Ver más <ArrowRight aria-hidden="true" />
           </Link>
@@ -241,11 +279,9 @@ export function ProductCard({
 export function ProductGrid({
   items,
   favorites,
-  onContact,
 }: {
   items: Product[];
   favorites: Favorites;
-  onContact: (product?: string) => void;
 }) {
   if (items.length === 0) {
     return <p className="empty-state">No encontramos productos con esos criterios.</p>;
@@ -253,7 +289,7 @@ export function ProductGrid({
   return (
     <div className="product-grid">
       {items.map((product) => (
-        <ProductCard key={product.id} product={product} favorites={favorites} onContact={onContact} />
+        <ProductCard key={product.id} product={product} favorites={favorites} />
       ))}
     </div>
   );
@@ -419,10 +455,88 @@ export function Header() {
   );
 }
 
-function GradualBlur() {
+const GRADUAL_BLUR_LAYERS = [2, 5, 9, 14, 20];
+
+export const getCarouselEdgeState = (scrollLeft: number, scrollWidth: number, clientWidth: number, tolerance = 4) => {
+  const maxScroll = Math.max(0, scrollWidth - clientWidth);
+  if (maxScroll <= tolerance) return { left: false, right: false };
+  return {
+    left: scrollLeft > tolerance,
+    right: maxScroll - scrollLeft > tolerance,
+  };
+};
+
+function GradualBlur({ side, visible }: { side: 'left' | 'right'; visible: boolean }) {
   return (
-    <div className="gradual-blur" aria-hidden="true">
-      {Array.from({ length: 6 }, (_, index) => <span key={index} style={{ '--blur-step': index } as React.CSSProperties} />)}
+    <div className={`gradual-blur gradual-blur--${side}${visible ? ' is-visible' : ''}`} aria-hidden="true">
+      {GRADUAL_BLUR_LAYERS.map((radius) => (
+        <span
+          key={radius}
+          style={{ backdropFilter: `blur(${radius}px)`, WebkitBackdropFilter: `blur(${radius}px)` }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function FeaturedProductsCarousel({ favorites, onContact }: { favorites: Favorites; onContact: (product?: string) => void }) {
+  void onContact;
+  const track = useRef<HTMLDivElement>(null);
+  const animationFrame = useRef<number | null>(null);
+  const [edges, setEdges] = useState({ left: false, right: false });
+  const featured = products.filter((product) => product.featured).slice(0, 6);
+
+  const updateEdges = () => {
+    const element = track.current;
+    if (!element) return;
+    const next = getCarouselEdgeState(element.scrollLeft, element.scrollWidth, element.clientWidth);
+    setEdges((current) => current.left === next.left && current.right === next.right ? current : next);
+  };
+
+  const scheduleEdgeUpdate = () => {
+    if (animationFrame.current !== null) return;
+    animationFrame.current = window.requestAnimationFrame(() => {
+      animationFrame.current = null;
+      updateEdges();
+    });
+  };
+
+  useEffect(() => {
+    const element = track.current;
+    if (!element) return;
+    updateEdges();
+    const observer = new ResizeObserver(scheduleEdgeUpdate);
+    observer.observe(element);
+    element.addEventListener('scroll', scheduleEdgeUpdate, { passive: true });
+    window.addEventListener('resize', scheduleEdgeUpdate, { passive: true });
+    return () => {
+      observer.disconnect();
+      element.removeEventListener('scroll', scheduleEdgeUpdate);
+      window.removeEventListener('resize', scheduleEdgeUpdate);
+      if (animationFrame.current !== null) window.cancelAnimationFrame(animationFrame.current);
+    };
+  }, []);
+
+  const scroll = (direction: number) => {
+    const element = track.current;
+    if (!element) return;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    element.scrollBy({ left: direction * element.clientWidth * 0.82, behavior: reducedMotion ? 'auto' : 'smooth' });
+  };
+
+  return (
+    <div className="featured-carousel">
+      <div className="featured-carousel__controls" aria-label="Controles de selección editorial">
+        <button type="button" onClick={() => scroll(-1)} disabled={!edges.left} aria-label="Ver productos anteriores"><ChevronLeft /></button>
+        <button type="button" onClick={() => scroll(1)} disabled={!edges.right} aria-label="Ver productos siguientes"><ChevronRight /></button>
+      </div>
+      <div className="featured-carousel__shell">
+        <div className="featured-carousel__track" ref={track} tabIndex={0} aria-label="Selección editorial de productos">
+          {featured.map((product) => <ProductCard key={product.id} product={product} favorites={favorites} />)}
+        </div>
+        <GradualBlur side="left" visible={edges.left} />
+        <GradualBlur side="right" visible={edges.right} />
+      </div>
     </div>
   );
 }
@@ -438,6 +552,7 @@ function Home({ favorites, onContact }: { favorites: Favorites; onContact: (prod
           <p>Frutos secos, frutas deshidratadas, especias, semillas y más.</p>
           <div className="hero-actions">
             <Link className="primary-button" to="/catalogo">Explorar catálogo</Link>
+            <DownloadButton />
           </div>
         </div>
         <div className="hero-gallery" aria-label="Selección de productos BM Nuts">
@@ -448,70 +563,133 @@ function Home({ favorites, onContact }: { favorites: Favorites; onContact: (prod
             </figure>
           ))}
         </div>
-        <GradualBlur />
       </section>
 
-      <section className="categories-section section-shell" aria-labelledby="categories-title">
-        <span className="eyebrow">Encuentra tu categoría</span>
-        <h2 id="categories-title">Explora por familia</h2>
-        <div className="category-grid">
-          {categories.map((category) =>
-            category.isComingSoon ? (
-              <article key={category.id} className="category-card is-coming">
-                <Leaf aria-hidden="true" />
-                <h3>{category.name}</h3>
-                <small>Próximamente</small>
-              </article>
-            ) : (
-              <Link key={category.id} className="category-card" to={`/catalogo/${category.id}`}>
-                <Leaf aria-hidden="true" />
-                <h3>{category.name}</h3>
-                <span>Explorar <ArrowRight aria-hidden="true" /></span>
-              </Link>
-            ),
-          )}
-        </div>
-      </section>
+      <ThemedCollections />
+
+      <FeaturedStandCarousel onContact={onContact} />
 
       <section className="featured-section">
         <div className="section-shell">
           <span className="eyebrow eyebrow--light">Una selección para empezar</span>
           <h2>Selección editorial</h2>
-          <ProductGrid
-            items={products.filter((product) => product.featured).slice(0, 6)}
-            favorites={favorites}
-            onContact={onContact}
-          />
+          <FeaturedProductsCarousel favorites={favorites} onContact={onContact} />
         </div>
       </section>
     </main>
   );
 }
 
-function CatalogPage({ favorites, onContact }: { favorites: Favorites; onContact: (product?: string) => void }) {
+export function CatalogPage({ favorites, onContact }: { favorites: Favorites; onContact: (product?: string) => void }) {
+  void onContact;
   const { categoria } = useParams();
-  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(() => searchParams.get('q') || '');
   const [onlyFavorites, setOnlyFavorites] = useState(false);
+  const selectedCollection = getCollectionProducts(searchParams.get('coleccion'));
+  const currentCategory = categories.find((category) => category.id === categoria);
+  const selectedSubcategory = currentCategory ? searchParams.get('subcategoria') : null;
+  const categorySubcategories = currentCategory ? getCategorySubcategories(products, currentCategory.id) : [];
+  const subcategories = currentCategory && categorySubcategories.length === 1 && normalizeSearch(categorySubcategories[0]) === normalizeSearch(currentCategory.name)
+    ? []
+    : categorySubcategories;
 
   useEffect(() => setQuery(searchParams.get('q') || ''), [searchParams]);
 
   const visibleProducts = useMemo(
     () =>
-      searchProducts(products, query).filter(
-        (product) =>
-          (!categoria || product.categoryId === categoria) &&
-          (!onlyFavorites || favorites.favorites.includes(product.id)),
-      ),
-    [query, categoria, onlyFavorites, favorites.favorites],
+      filterCatalogProducts(products, {
+        query,
+        categoryId: currentCategory?.id,
+        subcategory: selectedSubcategory,
+        onlyFavorites,
+        favoriteIds: favorites.favorites,
+        collectionIds: selectedCollection?.ids,
+      }),
+    [query, currentCategory?.id, selectedSubcategory, onlyFavorites, favorites.favorites, selectedCollection],
   );
-  const currentCategory = categories.find((category) => category.id === categoria);
+
+  const selectCategory = (categoryId: string | null) => {
+    const next = new URLSearchParams(searchParams);
+    next.delete('subcategoria');
+    const nextCategoryId = categoryId && currentCategory?.id === categoryId ? null : categoryId;
+    navigate({ pathname: nextCategoryId ? `/catalogo/${nextCategoryId}` : '/catalogo', search: next.toString() });
+  };
+
+  const selectSubcategory = (subcategory: string | null) => {
+    const next = new URLSearchParams(searchParams);
+    if (subcategory && selectedSubcategory !== subcategory) next.set('subcategoria', subcategory);
+    else next.delete('subcategoria');
+    setSearchParams(next);
+  };
+
+  const hasActiveFilters = Boolean(currentCategory || selectedSubcategory || selectedCollection || query || onlyFavorites);
 
   return (
     <main className="catalog-page section-shell">
       <span className="eyebrow">Catálogo BM Nuts</span>
-      <h1>{currentCategory?.name || 'Todos los productos'}</h1>
+      <h1>{selectedCollection?.collection.titulo || currentCategory?.name || 'Todos los productos'}</h1>
       <p className="page-intro">Explora el catálogo informativo y conoce cada producto antes de contactarnos.</p>
+      <section className="catalog-filters" aria-label="Filtros del catálogo">
+        <span className="catalog-filters__label">Familias principales</span>
+        <div className="filter-chip-row">
+          <button type="button" className={!currentCategory ? 'is-active' : ''} aria-pressed={!currentCategory} onClick={() => selectCategory(null)}>Todos</button>
+          {categories.filter((category) => !category.isComplementary).map((category) => (
+            <button
+              key={category.id}
+              type="button"
+              disabled={category.isComingSoon}
+              className={currentCategory?.id === category.id ? 'is-active' : ''}
+              aria-pressed={currentCategory?.id === category.id}
+              title={category.isComingSoon ? 'Sin productos disponibles todavía' : undefined}
+              onClick={() => selectCategory(category.id)}
+            >
+              {category.name}{category.isComingSoon && <small>Próximamente</small>}
+            </button>
+          ))}
+        </div>
+        <span className="catalog-filters__label">Más productos</span>
+        <div className="filter-chip-row filter-chip-row--secondary">
+          {categories.filter((category) => category.isComplementary).map((category) => (
+            <button
+              key={category.id}
+              type="button"
+              className={currentCategory?.id === category.id ? 'is-active' : ''}
+              aria-pressed={currentCategory?.id === category.id}
+              onClick={() => selectCategory(category.id)}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+        {currentCategory && subcategories.length > 0 && (
+          <>
+            <span className="catalog-filters__label">Subcategorías de {currentCategory.name}</span>
+            <div className="filter-chip-row filter-chip-row--secondary">
+              <button type="button" className={!selectedSubcategory ? 'is-active' : ''} aria-pressed={!selectedSubcategory} onClick={() => selectSubcategory(null)}>Todos</button>
+              {subcategories.map((subcategory) => (
+                <button key={subcategory} type="button" className={selectedSubcategory === subcategory ? 'is-active' : ''} aria-pressed={selectedSubcategory === subcategory} onClick={() => selectSubcategory(subcategory)}>{subcategory}</button>
+              ))}
+            </div>
+          </>
+        )}
+      </section>
+      {selectedCollection && (
+        <button
+          className="collection-filter-chip"
+          type="button"
+          onClick={() => {
+            const next = new URLSearchParams(searchParams);
+            next.delete('coleccion');
+            setSearchParams(next);
+          }}
+          aria-label={`Quitar colección ${selectedCollection.collection.titulo}`}
+          aria-pressed="true"
+        >
+          {selectedCollection.collection.titulo} <X aria-hidden="true" />
+        </button>
+      )}
       <div className="catalog-toolbar">
         <label className="catalog-search">
           <Search aria-hidden="true" />
@@ -528,9 +706,15 @@ function CatalogPage({ favorites, onContact }: { favorites: Favorites; onContact
           <Heart aria-hidden="true" /> Solo favoritos
         </label>
         <span className="result-count" aria-live="polite">{visibleProducts.length} resultados</span>
+        {hasActiveFilters && (
+          <button className="clear-filters" type="button" onClick={() => {
+            setQuery('');
+            setOnlyFavorites(false);
+            navigate('/catalogo');
+          }}>Limpiar filtros</button>
+        )}
       </div>
-      <ProductGrid items={visibleProducts} favorites={favorites} onContact={onContact} />
-      <DownloadButton />
+      <ProductGrid items={visibleProducts} favorites={favorites} />
     </main>
   );
 }
@@ -564,32 +748,76 @@ function Rating({ slug }: { slug: string }) {
   );
 }
 
-function ProductPage({ favorites, onContact }: { favorites: Favorites; onContact: (product?: string) => void }) {
+export function ProductPage({ favorites, onContact }: { favorites: Favorites; onContact: (product?: string) => void }) {
   const { slug = '' } = useParams();
   const product = products.find((item) => item.slug === slug);
   const [zoomed, setZoomed] = useState(false);
   const [showIdeas, setShowIdeas] = useState(false);
   const fact = product ? productFacts[product.id] : undefined;
+  const education = product ? productEducation[product.id] : undefined;
+  const imagePresentation = product ? getProductImagePresentation(product.slug) : null;
 
   if (!product) return <main className="section-shell not-found"><h1>Producto no encontrado</h1></main>;
 
   return (
     <main className="product-page section-shell">
-      <div className="product-detail-media">
-        {product.images[0] ? (
-          <img src={product.images[0]} alt={product.imageAlt || product.name} />
-        ) : (
-          <PhotoPlaceholder />
-        )}
-        {product.images[0] && (
-          <button type="button" onClick={() => setZoomed(true)}><ZoomIn /> Ampliar</button>
-        )}
+      <div className="product-detail-visual">
+        <div className="product-detail-media">
+          {product.images[0] ? (
+            <img
+              src={product.images[0]}
+              alt={product.imageAlt || product.name}
+              style={{
+                objectPosition: imagePresentation?.objectPosition,
+                padding: imagePresentation?.framePadding,
+                transform: `scale(${imagePresentation?.scale ?? 1})`,
+              }}
+            />
+          ) : (
+            <PhotoPlaceholder />
+          )}
+          {product.images[0] && (
+            <button type="button" onClick={() => setZoomed(true)}><ZoomIn /> Ampliar</button>
+          )}
+        </div>
+        <ProductPresentations product={product} />
       </div>
       <article className="product-detail-copy">
         <span className="eyebrow">{product.subcategory}</span>
         <h1>{product.name}</h1>
         <p className="detail-description">{product.shortDescription}</p>
         {product.longDescription && <p>{product.longDescription}</p>}
+        {product.variants && product.variants.length > 1 && (
+          <section className="product-variants" aria-labelledby={`variants-${product.id}`}>
+            <h2 id={`variants-${product.id}`}>Presentaciones de esta familia</h2>
+            <ul>
+              {product.variants.map((variant) => (
+                <li key={variant.id}>
+                  <span>{variant.name}</span>
+                  {variant.presentation && <small>{variant.presentation}</small>}
+                </li>
+              ))}
+            </ul>
+            <p>Consulta la presentación vigente en el local. Este catálogo no confirma stock en tiempo real.</p>
+          </section>
+        )}
+        {education?.propiedades.length ? (
+          <section className="nutrition-block" aria-labelledby={`nutrition-${product.id}`}>
+            <h2 id={`nutrition-${product.id}`}>Propiedades nutricionales</h2>
+            <ul>{education.propiedades.map((property) => <li key={property}>{property}</li>)}</ul>
+          </section>
+        ) : null}
+        {education?.beneficiosDeNutrientes.length ? (
+          <section className="nutrition-block nutrition-block--benefits" aria-labelledby={`benefits-${product.id}`}>
+            <h2 id={`benefits-${product.id}`}>Beneficios de sus nutrientes</h2>
+            <ul>{education.beneficiosDeNutrientes.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul>
+            {education.advertencias?.map((warning) => <p className="nutrition-warning" key={warning}>{warning}</p>)}
+            <details className="nutrition-sources">
+              <summary>Fuentes de información</summary>
+              <ul>{education.fuentes.map((source, index) => <li key={source}><a href={source} target="_blank" rel="noopener noreferrer">Fuente {index + 1}</a></li>)}</ul>
+            </details>
+          </section>
+        ) : null}
         {fact && (
           <aside className="product-fact">
             <span aria-hidden="true">?</span>
@@ -608,6 +836,7 @@ function ProductPage({ favorites, onContact }: { favorites: Favorites; onContact
             {showIdeas && <ul>{product.traditionalUses.map((idea) => <li key={idea}>{idea}</li>)}</ul>}
           </div>
         )}
+        <RelatedProducts productId={product.id} />
         <Rating slug={slug} />
       </article>
       {zoomed && product.images[0] && (
@@ -637,6 +866,11 @@ function AboutPage() {
   );
 }
 
+function CombinationPage({ onContact }: { onContact: (product?: string) => void }) {
+  const { id = '' } = useParams();
+  return <CombinationDetail itemId={id} onContact={onContact} />;
+}
+
 export function ContactPage() {
   return (
     <main className="contact-page section-shell">
@@ -653,7 +887,6 @@ export function ContactPage() {
             <h2>{location.area}</h2>
             <address>{location.address}</address>
             <p>{location.description}</p>
-            {location.pendingVerification && <small>Ortografía y numeración pendientes de confirmación.</small>}
             <a href={mapsSearchUrl(location.address)} target="_blank" rel="noopener noreferrer">Buscar en Google Maps <ArrowRight aria-hidden="true" /></a>
           </article>
         ))}
@@ -687,7 +920,7 @@ export function Footer({ reopenNotice }: { reopenNotice: () => void }) {
         <section className="footer-contact">
           <h3>Contacto y catálogo</h3>
           <Link to="/contacto">WhatsApp, Facebook e Instagram</Link>
-          <DownloadButton />
+          <a className="footer-pdf-link" href="/downloads/frutos-secos-bmnuts.pdf" download>Descargar catálogo PDF</a>
           <button type="button" className="text-button" onClick={reopenNotice}>Preferencias locales</button>
         </section>
       </div>
@@ -708,6 +941,31 @@ function LocalNotice({ close }: { close: () => void }) {
       <p>Los favoritos y tu interés en productos se guardan localmente. No usamos este aviso para afirmar analítica o seguimiento.</p>
       <button type="button" className="primary-button" onClick={close}>Entendido</button>
     </aside>
+  );
+}
+
+export function BackToTop() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const update = () => setVisible(window.scrollY > 350);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, []);
+
+  return (
+    <button
+      className={`back-to-top${visible ? ' is-visible' : ''}`}
+      type="button"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+      tabIndex={visible ? 0 : -1}
+      onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })}
+    >
+      <ArrowUp aria-hidden="true" />
+      <span>Volver arriba</span>
+    </button>
   );
 }
 
@@ -733,11 +991,13 @@ function App() {
         <Route path="/catalogo" element={<CatalogPage favorites={favorites} onContact={openContact} />} />
         <Route path="/catalogo/:categoria" element={<CatalogPage favorites={favorites} onContact={openContact} />} />
         <Route path="/producto/:slug" element={<ProductPage favorites={favorites} onContact={openContact} />} />
+        <Route path="/combinacion/:id" element={<CombinationPage onContact={openContact} />} />
         <Route path="/nosotros" element={<AboutPage />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="*" element={<main className="section-shell not-found"><h1>Página no encontrada</h1><Link to="/">Volver al inicio</Link></main>} />
       </Routes>
       <Footer reopenNotice={() => setNoticeOpen(true)} />
+      <BackToTop />
       <ContactModal open={modalOpen} close={() => setModalOpen(false)} product={selectedProduct} />
       {noticeOpen && <LocalNotice close={closeNotice} />}
     </>

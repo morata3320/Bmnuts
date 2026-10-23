@@ -3,7 +3,7 @@ import React, { act, type ReactNode } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { MemoryRouter } from 'react-router-dom';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { ContactModal, ContactPage, FavoriteButton, Footer, ProductMedia, SocialLinks, useFavorites } from './main';
+import { CatalogPage, ContactModal, ContactPage, FavoriteButton, Footer, ProductMedia, SocialLinks, useFavorites } from './main';
 import { getPublishedProducts } from './catalog';
 
 (globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -31,7 +31,10 @@ describe('componentes reparados', () => {
     const product = getPublishedProducts().find((item) => item.name === 'Almendra natural')!;
     const container = render(<ProductMedia product={product} />);
     const media = container.querySelector('.product-media')!;
-    const button = container.querySelector<HTMLButtonElement>('[aria-label="Ver descripción"]')!;
+    const button = container.querySelector<HTMLButtonElement>('.product-media')!;
+
+    expect(container.querySelector('.flip-button')).toBeNull();
+    expect(button.getAttribute('aria-label')).toContain('Ver descripción');
 
     act(() => button.click());
 
@@ -105,5 +108,18 @@ describe('componentes reparados', () => {
     expect(container.textContent).toContain('Sucursal');
     expect(mapLinks).toHaveLength(2);
     expect([...mapLinks].every((link) => link.href.startsWith('https://www.google.com/maps/search/'))).toBe(true);
+    expect(container.textContent).not.toContain('Ortografía y numeración pendientes de confirmación');
+  });
+
+  it('no repite el CTA animado de descarga dentro del catálogo', () => {
+    function Harness() {
+      const favorites = useFavorites();
+      return <CatalogPage favorites={favorites} onContact={() => undefined} />;
+    }
+    const container = render(<MemoryRouter initialEntries={['/catalogo']}><Harness /></MemoryRouter>);
+    expect(container.querySelector('.catalog-filters')).not.toBeNull();
+    expect(container.querySelector('.download-button')).toBeNull();
+    expect(container.textContent).not.toContain('Consultar precio');
+    expect(container.querySelectorAll('.product-card-price').length).toBeGreaterThan(0);
   });
 });

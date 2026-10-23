@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { data, pickNextTagline } from './catalog';
 import { contactConfig, mapsSearchUrl } from './contactConfig';
 import { productFacts } from './productFacts';
+import { productEducation } from './productEducation';
 
 describe('ajustes finales BM Nuts', () => {
   it('mantiene seis slogans comerciales y evita la repetición inmediata', () => {
@@ -33,5 +34,19 @@ describe('ajustes finales BM Nuts', () => {
     expect(contactConfig.socials).toHaveLength(3);
     expect(contactConfig.socials.find((social) => social.id === 'whatsapp')?.url).toBeNull();
     expect(contactConfig.socials.find((social) => social.id === 'instagram')?.url).toBeNull();
+  });
+
+  it('publica educación opcional solo en fichas verificadas y sin promesas médicas', () => {
+    const ids = Object.keys(productEducation);
+    expect(ids.length).toBeGreaterThan(0);
+    expect(ids.every((id) => data.products.some((product) => product.id === id && !product.needsVerification))).toBe(true);
+    expect(productEducation['BMN-005']).toBeUndefined();
+    expect(productEducation['BMN-061']).toBeUndefined();
+    expect(productEducation['BMN-084']).toBeUndefined();
+    const publishedCopy = ids.flatMap((id) => [
+      ...productEducation[id].propiedades,
+      ...productEducation[id].beneficiosDeNutrientes,
+    ]).join(' ');
+    expect(publishedCopy).not.toMatch(/cura|previene|trata|garantiza|adelgaza/i);
   });
 });

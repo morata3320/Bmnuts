@@ -1,1 +1,1 @@
-import js from '@eslint/js'; import tseslint from 'typescript-eslint'; export default [js.configs.recommended,...tseslint.configs.recommended,{ignores:['dist']}];
+import js from '@eslint/js'; import tseslint from 'typescript-eslint'; export default [js.configs.recommended,...tseslint.configs.recommended,{ignores:['dist','scripts/visual-qa.cjs','scripts/final-visual-qa.cjs']}];
